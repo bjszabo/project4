@@ -98,6 +98,11 @@ p {
   padding-right: 0.25em;
   text-justify: inter-word;
 }
+.direction {
+  font-style: italic;
+  color: blue;
+  text-justify: center;
+}
 ul,
 li {
   font-size: 1em;
