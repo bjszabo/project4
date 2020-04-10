@@ -114,7 +114,8 @@ h4 {
   padding-bottom: .5em;
   text-align: center;
 }
-#home-page h4 {
+#home-page h4,
+#resume-page .break {
   padding-top: 1em;
 }
 #resume-page h3,
@@ -155,6 +156,7 @@ p {
   list-style: square;
   list-style-position: outside;
   margin-left: 1.25em;
+  padding-top: 0.5em;
 }
 .projlist li{
   list-style: disc;
@@ -189,7 +191,7 @@ li {
 .phone li.email {
   font-size: 0.7em;
 }
-ul {
+#home-page ul {
   padding-bottom: .75em; /*12px / 16 = 0.75em*/
 }
 
