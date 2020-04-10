@@ -66,11 +66,14 @@ header {
 #volunteer figcaption {
   color: #003300;
 }
-h1,
-h3 {
-  padding-bottom: .25em;
+h1{
   text-align: center;
 }
+#home-page h1,
+#home-page h3 {
+  padding-bottom: .25em;
+}
+
 h1 {
   color: #1E90FF;
   font-family: 'Sansita', sans-serif;
@@ -81,11 +84,12 @@ h1 {
 h2{
   color: black;
   text-transform: uppercase;
-  padding-bottom: none;
+  padding-bottom: 0;
 }
 #resume-page h1{
   font-family: 'Mukta', sans-serif;
 }
+
 
 h2 {
   align-self: center;
@@ -109,8 +113,26 @@ h4 {
   font-weight: bold;
   padding-bottom: .5em;
   text-align: center;
+}
+#home-page h4 {
   padding-top: 1em;
 }
+#resume-page h3 li,
+#resume-page h4 li{
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.95em;
+  text-align: left;
+  padding-bottom: 0.25em;
+}
+
+#resume-page h3{
+  font-weight: normal;
+}
+#resume-page h4 li{
+  font-style: italic;
+  font-weight: bold;
+  }
+
 p {
   color: black;
   font-size: 0.875em; /*14px / 16 = 0.875em*/
@@ -120,28 +142,56 @@ p {
   padding-right: 0.25em;
   text-justify: inter-word;
 }
-#resume-page p{
+
+#resume-page p,
+.position p,
+.projlist li{
   font-family: 'Work Sans', sans-serif;
+}
+.responsibilities li,
+.projlist li {
+  font-size:  0.875em; /*14px / 16 = 0.875em*/
+  line-height: 1.25em;
+  text-align: left;
+}
+.responsibilities li {
+  list-style: square;
+  list-style-position: outside;
+  margin-left: 1.25em;
+}
+.projlist li{
+  list-style: disc;
+  margin-left: 2.5em;
+
+}
+
+.position p {
+  text-align: left;
 }
 
 .direction {
   font-style: italic;
   color: blue;
-  text-justify: center;
+  text-align: center;
 }
 ul,
 li {
   font-size: 1em;
   line-height: 1em;
   text-align: center;
+}
+
+#home-page ul,
+#home-page li {
   padding: 0.25em;
 }
+
 .address li,
 .phone li {
   font-size: 0.9em;
 }
-.phone li .email {
-  font-size: 0.75em;
+.phone li.email {
+  font-size: 0.7em;
 }
 ul {
   padding-bottom: .75em; /*12px / 16 = 0.75em*/
@@ -220,10 +270,12 @@ img {
   flex: 1 0 7.5em; /*120px / 16 = 7.5*/
   align-items: center;
   justify-content: center;
+  padding: 0.25em;
   }
 
 .address li,
-.phone li {
+.phone li
+ {
   display: inline-block;
   font-family: 'Work Sans', sans-serif;
   text-transform: uppercase;
@@ -538,6 +590,7 @@ img {
     margin-left: 13.75em; /*220px / 16 = 13.75em*/
     margin-right: 13.75em; /*220px / 16 = 13.75em*/
 }
+}
 /*1400px = 1400 / 16 = 87.5‬em*/
 @media screen and (min-width: 87.5em) {
   html {
@@ -558,5 +611,5 @@ img {
     margin-left: 25em;/*400px / 16 = 25em*/
     margin-right: 25em;
   }
-  }
+}
 }
