@@ -80,8 +80,12 @@ h1 {
   font-size: 2.75em; /*44px / 16 = 2.75em*/
   font-weight: bolder;
 }
+
+#resume-page h1{
+  font-size: 2.5em;
+}
 #resume-page h1,
-h2{
+#resume-page h2{
   color: black;
   text-transform: uppercase;
   padding-bottom: 0;
@@ -90,16 +94,17 @@ h2{
   font-family: 'Mukta', sans-serif;
 }
 
-
 h2 {
   align-self: center;
-  font-size: 1em; /*16px / 16 = 1em*/
+  font-size: 1.25em; /*20px / 16 = 1.25em*/
   font-weight: bold;
   padding-top: 0.5em;
   text-align: center;
 }
 
-#work h2{
+#work h2,
+#hobby h2,
+#volunteer h2{
   padding-bottom: .5em;
 }
 
@@ -110,7 +115,7 @@ h2 {
 }
 
 h4 {
-  font-size: 1em;
+  font-size: 0.75em;
   font-weight: bold;
   padding-bottom: .5em;
   text-align: center;
@@ -149,6 +154,7 @@ p {
   text-justify: inter-word;
 }
 
+.responsibilities li,
 #resume-page p,
 .position p,
 .projlist li{
@@ -156,7 +162,7 @@ p {
 }
 .responsibilities li,
 .projlist li {
-  font-size:  0.875em; /*14px / 16 = 0.875em*/
+  font-size:  1em;
   line-height: 1.25em;
   text-align: left;
 }
@@ -182,7 +188,7 @@ p {
 }
 ul,
 li {
-  font-size: 1em;
+  font-size: 0.875em;
   line-height: 1em;
   text-align: center;
 }
@@ -197,7 +203,8 @@ li {
   font-size: 0.9em;
 }
 .phone li.email {
-  font-size: 0.7em;
+  font-size: 0.85em;
+  padding-bottom: 1em;
 }
 #home-page ul {
   padding-bottom: .75em; /*12px / 16 = 0.75em*/
@@ -213,14 +220,18 @@ figcaption {
   font-size: 0.75em; /* 12px / 16 = 0.75em */
   text-align: center;
 }
-a:visited {
+a:visited,
+a:link {
   color: slategray;
 }
-
+#resume-page a:link,
+#resume-page a:visited {
+  color:black;
+}
 footer {
   padding-top: 2.5em; /*2 times line height of paragraph text*/
 }
-footer li, a:link{
+footer li, footer a:link{
   color: #3399ff;
 }
 
@@ -234,7 +245,7 @@ footer .cr {
 }
 
 hr {
-  color: black;
+  border: 2px solid black;
 }
 
 /* Modular styles and Responsive Media */
@@ -262,38 +273,27 @@ img {
 .navigation {
   list-style-type: none;
 }
-
-.navigation {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+.navigation li{
+  font-size: 1.125em;
+  line-height: 1.25em;
 }
-
-.navigation li/*,
-.address li,
-.phone li*/ {
-  display: flex;
-  flex: 1 0 7.5em; /*120px / 16 = 7.5*/
-  align-items: center;
-  justify-content: center;
-  padding: 0.25em;
-  }
+#resume-page .navigation li{
+  line-height: 1.75em;
+}
 
 .address li,
 .phone li
  {
-  display: inline-block;
   font-family: 'Work Sans', sans-serif;
+  padding: .25em;
   text-transform: uppercase;
 }
-
-
 
 
 /*state styles */
 /*220px = 220 / 16 = 13.75em */
 @media screen and (min-width: 13.75em){
-  h2 {
+  #home-page h2 {
     font-size: 1.5em; /*20px / 16 = 1.5em*/
   }
 }
@@ -302,40 +302,92 @@ img {
   p {
     font-size: 1em;
     line-height: 1.25em; /*20px / 16 = 1.25em*/
+  }
+  .responsibilities li,
+  .projlist li{
+    font-size: 1.125em;
+  }
 }
-
 /*256px = 256 / 16 = 16em */
 @media screen and (min-width: 16em){
   #navigation {
-    font-size: 0.75em /* 3/4 regular size*/
-  }
-  .navigation li {
-    flex: 1 0 3.125em; /*50px / 16 = 3.125em*/
-  }
-  .cooking {
-    flex-wrap: nowrap;
+    font-size: 0.9em /* 3/4 regular size*/
   }
 }
 /*275px = 275 / 16 = 17.1875em */
 @media screen and (min-width: 17.1875em){
-  h2 {
+  #home-page h2 {
     font-size: 2em; /*32px / 16 = 2em*/
   }
+  #work h4 {
+    font-size: 0.875em;
+  }
+  #work li {
+    font-size: 1em;
+  }
+  #resume-page h3,
+  #resume-page h4{
+    font-size: 1em;
+  }
 }
-.address li:before,
-.phone li:before {
-  content: '\00a0\2022\00a0\00a0';
-}
-.address li:first-child:before,
-.phone li:first-child:before {
-  content: '';
-}
-
 
 /*469px = 469 / 16 = 29.3125em */
 @media screen and (min-width: 29.3125em) {
+  h1{
+    font-size: 3.5em;
+  }
+  #home-page h2{
+    font-size: 2.25em;
+  }
+  #resume-page h1{
+    font-size: 3em;
+  }
+  #resume-page h3,
+  #resume-page h4{
+    font-size: 1.125em;
+  }
+  .responsibilities li,
+  .projlist li{
+    font-size: 1em;
+  }
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  #resume-page .navigation{
+    flex-wrap: wrap;
+  }
   .navigation li {
-    flex: 1 0 6.25em; /*100px / 16 = 6.25*/
+    display: flex;
+    flex: 1 0 4em; /*100px / 16 = 6.25*/
+    font-size: 1em;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25em;
+  }
+  .cooking {
+    flex-wrap: nowrap;
+  }
+  ul,
+  li{
+    font-size: 1em;
+  }
+  .address li,
+  .phone li{
+    display: inline-block;
+    font-size: 1em;
+  }
+  .phone li.email{
+    font-size: 1em;
+  }
+  .address li:before,
+  .phone li:before {
+    content: '\00a0\2022\00a0\00a0';
+  }
+  .address li:first-child:before,
+  .phone li:first-child:before {
+    content: '';
   }
 }
 
@@ -424,8 +476,14 @@ img {
 
 /*626px = 626 / 16 = 39.125em*/
 @media screen and (min-width: 39.125em) {
+  #resume-page h1{
+    padding-bottom: 0.5em;
+  }
   #navigation {
     font-size: 1em /* 3/4 regular size*/
+  }
+  .navigation li {
+    flex: 1 0 5em;
   }
   #about {
     display: grid;
@@ -444,10 +502,17 @@ img {
   #about .summary {
     grid-column: span 4;
   }
-  #work .projects {
-    flex: 0 0 auto;
-    width: 100%;
+  #work .projects li{
+    display: inline-block;
+    font-size: 1em;
   }
+  #work .projects li:before{
+    content: '\00a0\2022\00a0\00a0';
+  }
+  #work .projects li:first-child:before {
+    content: '';
+  }
+
   #work h4 {
     padding-top: 1.875em; /*30px / 16 = 1.875em*/
     flex: 0 0 auto;
@@ -487,6 +552,10 @@ img {
 }
 /*720px = 720 / 16 = 45‬em*/
 @media screen and (min-width: 45em) {
+  .navigation li {
+    flex: 1 0 7.8125em; /*125px / 16 = 7.8125*/
+  }
+
   #about .summary {
     grid-row: 2 / 4;
     align-self: center;
@@ -506,13 +575,21 @@ img {
 }
 /*750px = 750 / 16 = 46.875‬em*/
 @media screen and (min-width: 46.875em) {
+  .navigation li {
+    flex: 1 0 6.25em; /*100px / 16 = 6.25*/
+  }
+  #resume-page .navigation li {
+    flex: 1 0 4em;
+    font-size: 0.9em;
+  }
+
   #about {
     grid-template-rows: 4.6875em 13.75em 13.76em 3.125em; /*75px 220px 220px 50px all dif by 16 */
   }
   #about p {
     padding-left: 1em;
     padding-right: 2em;
-    font-size: 1.125em;
+    font-size: 1em;
   }
 }
 
@@ -522,11 +599,13 @@ img {
     margin-left: 4.6875em;
     margin-right: 4.6875em;
   }
-  h2 {
+  #home-page h2,
+  #about h2 {
     font-size: 2.5em; /*40px / 16 = 2.5em*/
   }
-  p {
-    font-size: 1.25em; /*20px / 16 = 1.25em*/
+  #home-page p,
+  #about p {
+    font-size: 1.125em; /*20px / 16 = 1.25em*/
   }
   #about {
     grid-template-rows: 3.125em 17.1875em 17.1875em;  /*50px 275px 275px all dif by 16 */
