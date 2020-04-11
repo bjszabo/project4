@@ -13,16 +13,19 @@ html {
   font-family: "fahkwang", helvetica, arial, sans-serif;
   margin: 1.25em; /*20px / 16 = 1.25em*/
 }
-
+#resume-page {
+  background-color: darkgray;
+}
+#hobbies-page {
+  background-color: 	#ffc6cd;
+  border: 2mm ridge rgba(179, 0, 89, .9);
+}
 header {
   padding-bottom: 2em;
 }
 #about {
   background-color: darkgray;
   border: 2mm ridge rgba(128, 0, 0, .9);
-}
-#resume-page {
-  background-color: darkgray;
 }
 #about h2 {
   color: #800000;
