@@ -212,6 +212,7 @@ li {
 }
 .resnavigation li{
   font-size: 1em;
+  line-height: 1.125em;
 }
 
 figure {
@@ -297,7 +298,10 @@ img {
 /*220px = 220 / 16 = 13.75em */
 @media screen and (min-width: 13.75em){
   #home-page h2 {
-    font-size: 1.5em; /*20px / 16 = 1.5em*/
+    font-size: 1.75em; /*28px / 16 = 1.75em*/
+  }
+  #resume-page h1{
+    font-size: 2.375em; /*38px / 16 = 2.375em*/
   }
 }
 /*235px = 235 / 16 = 14.6875em */
@@ -677,7 +681,7 @@ img {
   .phone {
     margin-left: 13.75em; /*220px / 16 = 13.75em*/
     margin-right: 13.75em; /*220px / 16 = 13.75em*/
-}
+  }
 }
 /*1400px = 1400 / 16 = 87.5‬em*/
 @media screen and (min-width: 87.5em) {
