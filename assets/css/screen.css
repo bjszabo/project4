@@ -26,6 +26,7 @@ header {
 }
 #about h2 {
   color: #800000;
+  font-size: 1.5em;
 }
 #about figcaption {
   color: #4d0000;
@@ -65,20 +66,18 @@ header {
 #volunteer figcaption {
   color: #003300;
 }
-h1{
-  text-align: center;
-}
 #home-page h1,
 #home-page h3 {
   padding-bottom: .25em;
 }
 
 h1 {
-  color: #1E90FF;
+  color: darkgray;
   font-family: 'Sansita', sans-serif;
   font-size: 2.75em; /*44px / 16 = 2.75em*/
   font-weight: bolder;
   padding-bottom: 0.5em;
+  text-align: center;
 }
 #hobbies-page h1{
   font-size: 2.5em;
@@ -97,6 +96,7 @@ h1 {
 }
 
 #resume-page h2{
+  font-size: 1.125em;
   padding-bottom: 0;
 }
 
@@ -210,6 +210,9 @@ li {
 #home-page ul {
   padding-bottom: .75em; /*12px / 16 = 0.75em*/
 }
+.resnavigation li{
+  font-size: 1em;
+}
 
 figure {
   display: block;
@@ -225,8 +228,8 @@ a:visited,
 a:link {
   color: slategray;
 }
-#resume-page a:link,
-#resume-page a:visited {
+#resume-page .resnavigation a:link,
+#resume-page .resnavigation a:visited {
   color:black;
 }
 footer {
@@ -247,6 +250,7 @@ footer .cr {
 
 hr {
   border: 2px solid black;
+  width: 97%;
 }
 
 /* Modular styles and Responsive Media */
